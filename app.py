@@ -1,23 +1,44 @@
 import streamlit as st
 import json
 import os
+import gspread  # নতুন যোগ করা হলো
+from google.oauth2 import service_account  # নতুন যোগ করা হলো
 
+# --- GOOGLE SHEETS CONNECTION (নতুন কানেকশন লজিক) ---
+# এটি তোমার Secrets থেকে তথ্য নিয়ে গুগল শিটের সাথে যোগাযোগ করবে
+def connect_to_sheet():
+    try:
+        credentials = service_account.Credentials.from_service_account_info(
+            st.secrets["gcp_service_account"],
+            scopes=[
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/drive"
+            ]
+        )
+        client = gspread.authorize(credentials)
+        # তোমার শিটের নাম হুবহু 'EARNING-PRO-BD' হতে হবে
+        return client.open("EARNING-PRO-BD")
+    except Exception as e:
+        st.error(f"Error connecting to Google Sheets: {e}")
+        return None
 
-# --- INITIALIZE NEW DATA FIELDS ---
-# অ্যাপ শুরুতেই যেন নতুন ডাটা স্ট্রাকচারগুলো লোড করতে পারে তার ব্যবস্থা
+# কানেকশনটি সেশন স্টেটে রাখা হচ্ছে যাতে সব পেজ থেকে ব্যবহার করা যায়
+if "sheet_conn" not in st.session_state:
+    st.session_state.sheet_conn = connect_to_sheet()
+
+# --- INITIALIZE NEW DATA FIELDS (তোমার আগের কোড হুবহু রাখা হলো) ---
 def sync_data_structure():
     if os.path.exists("user_data.json"):
         try:
             with open("user_data.json", "r") as f:
                 data = json.load(f)
 
-            # আপনার শর্তানুযায়ী নতুন ফিল্ডগুলো চেক করা এবং না থাকলে যোগ করা
             updated = False
             fields = {
                 "affiliate_balances": {},
                 "wagering_target": {},
                 "device_tracking": {},
-                "active_packages": {} # Packages এর জন্য নতুন ফিল্ড যোগ করা হলো
+                "active_packages": {}
             }
 
             for key, default_value in fields.items():
@@ -31,14 +52,12 @@ def sync_data_structure():
         except:
             pass
 
-
 sync_data_structure()
 
 if "user" not in st.session_state:
     st.session_state.user = None
 
-# --- PAGE DEFINITIONS ---
-# প্রতিটি পেজকে একটি ভেরিয়েবলে রাখা হচ্ছে যাতে সুইচ করা সহজ হয়
+# --- PAGE DEFINITIONS (তোমার আগের কোড হুবহু রাখা হলো) ---
 register_pg = st.Page("pages/1_Register.py", title="Register", icon="📝")
 login_pg = st.Page("pages/2_Login.py", title="Login", icon="🔑")
 dashboard_pg = st.Page("pages/3_Dashboard.py", title="Dashboard", icon="📊")
@@ -47,10 +66,8 @@ admin_pg = st.Page("pages/5_Admin_Panel.py", title="Admin Panel", icon="🛠️"
 deposit_pg = st.Page("pages/6_Deposit.py", title="Deposit Funds", icon="📥")
 withdraw_pg = st.Page("pages/7_withdraw.py", title="Withdraw Money", icon="📤")
 refer_pg = st.Page("pages/8_Refer.py", title="Refer & Earn", icon="👥")
-# নতুন প্যাকেজ পেজটি এখানে যুক্ত করা হলো
 packages_pg = st.Page("pages/9_Packages.py", title="Stable Earn", icon="💎")
 
-# সেশন স্টেটে পেজগুলো সেভ করে রাখা হচ্ছে যাতে অন্য পেজ থেকে অ্যাক্সেস করা যায়
 st.session_state.pages = {
     "dashboard": dashboard_pg,
     "deposit": deposit_pg,
@@ -59,21 +76,18 @@ st.session_state.pages = {
     "refer": refer_pg,
     "register": register_pg,
     "login": login_pg,
-    "packages": packages_pg # এখানেও যুক্ত করা হলো
-
+    "packages": packages_pg
 }
 
 if st.session_state.user is None:
     pg = st.navigation([register_pg, login_pg])
 else:
-    # এখানে packages_pg যুক্ত করা হয়েছে যাতে লগইন করার পর এটি সাইডবারে দেখা যায়
     pages_list = [dashboard_pg, packages_pg, game_pg, deposit_pg, withdraw_pg, refer_pg]
     if st.session_state.user == "omi529061@gmail.com":
         pages_list.append(admin_pg)
     pg = st.navigation(pages_list)
 
-# --- SAFE NAVIGATION LOGIC (NOT CHANGING ANYTHING ABOVE) ---
-# এটি নিশ্চিত করবে যে switch_page কল করলে সঠিক ফোল্ডার পাথ পায়
+# --- SAFE NAVIGATION LOGIC ---
 if "register_clicked" in st.session_state and st.session_state.register_clicked:
     st.session_state.register_clicked = False
     st.switch_page("pages/1_Register.py")

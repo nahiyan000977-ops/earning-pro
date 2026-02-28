@@ -9,7 +9,7 @@ import time
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Register - Earning Pro", layout="centered")
 
-# --- ULTRA-PREMIUM CSS (With Fixed Error Box Styling) ---
+# --- ULTRA-PREMIUM CSS (তোমার আগের সব ডিজাইন হুবহু রাখা হয়েছে) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -17,13 +17,11 @@ st.markdown("""
     html, body, [class*="css"] { font-family: 'Poppins', sans-serif; }
     header {visibility: hidden;} 
 
-    /* High-End Radial Gradient Background */
     .stApp { 
         background: radial-gradient(circle at top right, #1e293b, #0f172a 60%, #020617 100%);
         color: #ffffff; 
     }
 
-    /* Professional Glassmorphism Card */
     div[data-testid="stForm"] {
         background: rgba(255, 255, 255, 0.02) !important;
         border: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -34,7 +32,6 @@ st.markdown("""
         -webkit-backdrop-filter: blur(20px);
     }
 
-    /* Input Fields Styling */
     .stTextInput input {
         background-color: rgba(255, 255, 255, 0.03) !important;
         color: #f8fafc !important;
@@ -50,7 +47,6 @@ st.markdown("""
         box-shadow: 0 0 15px rgba(56, 189, 248, 0.2) !important;
     }
 
-    /* --- এরর বক্স (Red Box) স্টাইল ফিক্স --- */
     div[data-testid="stNotification"] {
         background-color: rgba(255, 59, 48, 0.1) !important;
         color: #ffb3b3 !important;
@@ -66,7 +62,6 @@ st.markdown("""
 
     .stTextInput label { color: #38bdf8 !important; font-weight: 500 !important; }
 
-    /* Animated Primary Button */
     div.stButton > button {
         background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
         color: white !important;
@@ -116,12 +111,22 @@ def save_data(data):
         json.dump(data, f, indent=4)
 
 
+# --- GOOGLE SHEETS SYNC FUNCTION (নতুন যোগ করা হয়েছে) ---
+def sync_to_google_sheets(email, password, balance, ref_code, ref_by):
+    try:
+        if "sheet_conn" in st.session_state and st.session_state.sheet_conn:
+            sheet = st.session_state.sheet_conn.worksheet("Users")
+            sheet.append_row([email, password, balance, ref_code, ref_by])
+    except Exception as e:
+        # এটি ব্যাকগ্রাউন্ডে ভুল হলে স্টপ করবে না
+        pass
+
+
 def hash_password(password):
     return hashlib.sha256(str.encode(password)).hexdigest()
 
 
 # --- DEVICE TRACKING LOGIC ---
-# স্ট্যাটলেস ব্রাউজারে এটি ডিভাইস হিসেবে 'remote_ip' বা সেশন কি ট্র্যাক করবে
 user_device_id = st.context.headers.get("X-Forwarded-For", "unknown_device")
 
 # --- SMART REFERRAL LOGIC ---
@@ -143,7 +148,6 @@ with st.form("register_form"):
     if submit:
         data = load_data()
 
-        # ডিভাইস লিমিট চেক (একই ডিভাইস থেকে ৩টির বেশি একাউন্ট না)
         if "device_tracking" not in data:
             data["device_tracking"] = {}
 
@@ -159,17 +163,16 @@ with st.form("register_form"):
             st.error("❌ Device Limit Reached! You cannot create more than 3 accounts from this device.")
         else:
             # ডাটা সেভ লজিক
-            data["users"][email] = hash_password(password)
+            hashed_pw = hash_password(password)
+            data["users"][email] = hashed_pw
             data["balances"][email] = 0.0
 
-            # --- নতুন শর্তানুযায়ী ডাটা ফিল্ড অ্যাড ---
             if "affiliate_balances" not in data: data["affiliate_balances"] = {}
             if "wagering_target" not in data: data["wagering_target"] = {}
 
-            data["affiliate_balances"][email] = 0.0  # আলাদা অ্যাফিলিয়েট ব্যালেন্স
-            data["wagering_target"][email] = 0.0  # হিডেন ৭০% টার্গেট ট্র্যাকার
+            data["affiliate_balances"][email] = 0.0
+            data["wagering_target"][email] = 0.0
 
-            # ডিভাইস ট্র্যাকিং আপডেট
             data["device_tracking"][user_device_id] = accounts_on_device + 1
 
             prefix = email.split('@')[0][:3].upper()
@@ -177,6 +180,7 @@ with st.form("register_form"):
             user_new_ref = prefix + random_digits
             data["my_ref_code"][email] = user_new_ref
 
+            final_ref_by = "None"
             if referral_code:
                 referrer_found = None
                 for u_email, u_code in data["my_ref_code"].items():
@@ -188,21 +192,23 @@ with st.form("register_form"):
                     if "referred_by_map" not in data:
                         data["referred_by_map"] = {}
                     data["referred_by_map"][email] = referrer_found
+                    final_ref_by = referrer_found
 
-                    # রেফার বোনাস এখন সরাসরি ব্যালেন্সে না গিয়ে 'affiliate_balances' এ যাবে (আপনার ১ নং শর্ত)
-                    # বোনাস এমাউন্ট এখানে আপনার রেফারাল লজিক অনুযায়ী সেট করুন (যেমন ৫ টাকা)
                     bonus_amount = 5.0
                     data["affiliate_balances"][referrer_found] = data["affiliate_balances"].get(referrer_found,
                                                                                                 0.0) + bonus_amount
 
+            # ১. লোকাল ফাইলে সেভ (আগের মতোই)
             save_data(data)
+
+            # ২. গুগল শিটে সেভ (নতুন যোগ করা ফাংশন)
+            sync_to_google_sheets(email, hashed_pw, 0.0, user_new_ref, final_ref_by)
 
             # অটো-লগইন লজিক
             st.session_state.user = email
             st.success("✅ Registration successful! Entering Dashboard...")
             st.balloons()
 
-            # রিডাইরেক্ট লজিক
             time.sleep(1)
             st.rerun()
 
