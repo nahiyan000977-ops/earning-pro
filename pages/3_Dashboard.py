@@ -159,7 +159,7 @@ b1, b2, b3, b4, b5 = st.columns(5)
 with b1:
     if st.button("💎\nDeposit Funds"): st.switch_page("pages/6_Deposit.py")
 with b2:
-    if st.button("🚀\nWithdrawal"): st.switch_page("pages/7_Withdraw.py")
+    if st.button("🚀\nWithdrawal"): st.switch_page("pages/7_withdraw.py")
 with b3:
     if st.button("🕹️\nPlay Game"): st.switch_page("pages/4_Play_Game.py")
 with b4:
