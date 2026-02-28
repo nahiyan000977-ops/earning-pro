@@ -1,0 +1,2181 @@
+{
+    "users": {
+        "omi529061@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "nahiyan000977@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "exness0009@gamil.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "sharminakter0871@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "shahidaakter@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "selim0009@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "mithila0009@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "ismail0009@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "rono0009@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "nondita0009@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "rono999@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde",
+        "omi999@gmail.com": "dd4ee692c57f4e7c0a31408dac19a00db0b766435dfcbe06b7da5c8d718e2fde"
+    },
+    "balances": {
+        "omi529061@gmail.com": 550.0,
+        "nahiyan000977@gmail.com": 550.0,
+        "exness0009@gamil.com": 0.0,
+        "sharminakter0871@gmail.com": 0.0,
+        "shahidaakter@gmail.com": 0.0,
+        "selim0009@gmail.com": 0.0,
+        "mithila0009@gmail.com": 0.0,
+        "ismail0009@gmail.com": 10000.0,
+        "rono0009@gmail.com": 3270.0,
+        "nondita0009@gmail.com": 1000.0,
+        "rono999@gmail.com": 200.0,
+        "omi999@gmail.com": 10000.0
+    },
+    "deposits": [],
+    "history": {
+        "omi529061@gmail.com": [
+            {
+                "type": "Referral Bonus",
+                "from": "ismail0009@gmail.com",
+                "amount": 4000.0,
+                "time": "2026-02-27 14:57:47"
+            },
+            {
+                "type": "Referral Bonus",
+                "from": "rono0009@gmail.com",
+                "amount": 400.0,
+                "time": "2026-02-27 16:03:37"
+            },
+            {
+                "type": "Withdraw",
+                "amount": 400,
+                "method": "Bkash",
+                "number": "01872328618",
+                "time": "04:05 PM, 27 Feb 2026",
+                "status": "Pending"
+            },
+            {
+                "time": "2026-02-27 16:05:52",
+                "bet": 20,
+                "choice": "Red",
+                "result": "Green",
+                "status": "loss"
+            },
+            {
+                "time": "2026-02-27 16:05:58",
+                "bet": 20,
+                "choice": "Red",
+                "result": "Green",
+                "status": "loss"
+            },
+            {
+                "time": "2026-02-27 16:06:03",
+                "bet": 20,
+                "choice": "Red",
+                "result": "Blue",
+                "status": "loss"
+            },
+            {
+                "time": "2026-02-27 16:14:10",
+                "bet": 40,
+                "choice": "Red",
+                "result": "Blue",
+                "status": "loss"
+            },
+            {
+                "type": "Deposit",
+                "amount": 500.0,
+                "time": "2026-02-27 17:35:53",
+                "status": "Approved"
+            },
+            {
+                "type": "Deposit",
+                "amount": 350.0,
+                "time": "2026-02-27 18:38:00",
+                "status": "Approved"
+            },
+            {
+                "time": "2026-02-27 18:39:48",
+                "bet": 200,
+                "choice": "Red",
+                "result": "Blue",
+                "status": "loss"
+            },
+            {
+                "time": "2026-02-27 18:39:53",
+                "bet": 200,
+                "choice": "Red",
+                "result": "Green",
+                "status": "loss"
+            },
+            {
+                "time": "2026-02-27 18:39:59",
+                "bet": 200,
+                "choice": "Red",
+                "result": "Red",
+                "status": "win"
+            },
+            {
+                "time": "2026-02-27 18:40:11",
+                "bet": 200,
+                "choice": "Red",
+                "result": "Red",
+                "status": "win"
+            },
+            {
+                "time": "2026-02-27 18:40:17",
+                "bet": 200,
+                "choice": "Red",
+                "result": "Green",
+                "status": "loss"
+            },
+            {
+                "time": "2026-02-27 18:40:30",
+                "bet": 20,
+                "choice": "Red",
+                "result": "Red",
+                "status": "win"
+            },
+            {
+                "time": "2026-02-27 18:40:38",
+                "bet": 20,
+                "choice": "Red",
+                "result": "Red",
+                "status": "win"
+            },
+            {
+                "time": "2026-02-27 18:40:44",
+                "bet": 20,
+                "choice": "Red",
+                "result": "Green",
+                "status": "loss"
+            },
+            {
+                "type": "Withdraw",
+                "amount": 4970,
+                "method": "Bkash",
+                "number": "01872328618",
+                "time": "06:45 PM, 27 Feb 2026",
+                "status": "Pending"
+            },
+            {
+                "type": "Referral Bonus",
+                "from": "nondita0009@gmail.com",
+                "amount": 400.0,
+                "time": "2026-02-27 19:29:41"
+            },
+            {
+                "type": "Withdraw (From Player Balance)",
+                "amount": 100,
+                "method": "Bkash",
+                "time": "08:48 PM, 27 Feb 2026",
+                "status": "Pending"
+            },
+            {
+                "type": "Deposit",
+                "amount": 1000.0,
+                "time": "2026-02-28 00:47:13",
+                "status": "Approved"
+            },
+            {
+                "type": "Withdraw (From Player Balance)",
+                "amount": 1000,
+                "method": "Bkash",
+                "time": "12:48 AM, 28 Feb 2026",
+                "status": "Pending"
+            },
+            {
+                "type": "Deposit",
+                "amount": 1000.0,
+                "time": "2026-02-28 02:24:24",
+                "status": "Approved"
+            }
+        ],
+        "nahiyan000977@gmail.com": [
+            {
+                "type": "Deposit",
+                "amount": 550.0,
+                "time": "2026-02-27 13:51:15",
+                "status": "Approved"
+            }
+        ],
+        "ismail0009@gmail.com": [
+            {
+                "type": "Deposit",
+                "amount": 10000.0,
+                "time": "2026-02-27 14:57:47",
+                "status": "Approved"
+            }
+        ],
+        "rono0009@gmail.com": [
+            {
+                "type": "Deposit",
+                "amount": 1000.0,
+                "time": "2026-02-27 16:03:37",
+                "status": "Approved"
+            },
+            {
+                "time": "2026-02-27 16:21:11",
+                "bet": 20,
+                "choice": "Red",
+                "result": "Red",
+                "status": "win"
+            },
+            {
+                "type": "Deposit",
+                "amount": 500.0,
+                "time": "2026-02-27 17:44:42",
+                "status": "Approved"
+            },
+            {
+                "type": "Withdraw (From Player Balance)",
+                "amount": 1000,
+                "method": "Bkash",
+                "time": "08:50 PM, 27 Feb 2026",
+                "status": "Pending"
+            },
+            {
+                "type": "Withdraw (From Player Balance)",
+                "amount": 520,
+                "method": "Bkash",
+                "time": "08:56 PM, 27 Feb 2026",
+                "status": "Pending"
+            },
+            {
+                "type": "Referral Bonus (Affiliate)",
+                "from": "rono999@gmail.com",
+                "amount": 400.0,
+                "time": "2026-02-27 20:57:56"
+            },
+            {
+                "type": "Deposit",
+                "amount": 10000.0,
+                "time": "2026-02-27 23:00:06",
+                "status": "Approved"
+            },
+            {
+                "type": "Referral Bonus (Affiliate)",
+                "from": "omi999@gmail.com",
+                "amount": 4000.0,
+                "time": "2026-02-28 00:43:59"
+            },
+            {
+                "type": "Withdraw (From Affiliate Account)",
+                "amount": 2000,
+                "method": "Bkash",
+                "time": "12:45 AM, 28 Feb 2026",
+                "status": "Pending"
+            },
+            {
+                "type": "Withdraw (From Affiliate Account)",
+                "amount": 2000,
+                "method": "Bkash",
+                "time": "12:51 AM, 28 Feb 2026",
+                "status": "Pending"
+            },
+            {
+                "type": "Deposit",
+                "amount": 10000.0,
+                "time": "2026-02-28 02:11:24",
+                "status": "Approved"
+            }
+        ],
+        "nondita0009@gmail.com": [
+            {
+                "type": "Deposit",
+                "amount": 1000.0,
+                "time": "2026-02-27 19:29:41",
+                "status": "Approved"
+            }
+        ],
+        "rono999@gmail.com": [
+            {
+                "type": "Deposit",
+                "amount": 1000.0,
+                "time": "2026-02-27 20:57:56",
+                "status": "Approved"
+            },
+            {
+                "time": "2026-02-27 21:01:20",
+                "bet": 700,
+                "choice": "Red",
+                "result": "Green",
+                "status": "loss"
+            },
+            {
+                "type": "Withdraw (From Player Balance)",
+                "amount": 100,
+                "method": "Bkash",
+                "time": "09:01 PM, 27 Feb 2026",
+                "status": "Pending"
+            }
+        ],
+        "omi999@gmail.com": [
+            {
+                "type": "Deposit",
+                "amount": 10000.0,
+                "time": "2026-02-28 00:43:59",
+                "status": "Approved"
+            }
+        ]
+    },
+    "my_ref_code": {
+        "omi529061@gmail.com": "omi529061",
+        "nahiyan000977@gmail.com": "nahiyan000977",
+        "exness0009@gamil.com": "EXN3092",
+        "sharminakter0871@gmail.com": "SHA9751",
+        "shahidaakter@gmail.com": "SHA8727",
+        "selim0009@gmail.com": "SEL9145",
+        "mithila0009@gmail.com": "MIT4816",
+        "ismail0009@gmail.com": "ISM6916",
+        "rono0009@gmail.com": "RON0346",
+        "nondita0009@gmail.com": "NON0015",
+        "rono999@gmail.com": "RON5128",
+        "omi999@gmail.com": "OMI8920"
+    },
+    "referred_by_map": {
+        "exness0009@gamil.com": "omi529061@gmail.com",
+        "sharminakter0871@gmail.com": "omi529061@gmail.com",
+        "shahidaakter@gmail.com": "omi529061@gmail.com",
+        "selim0009@gmail.com": "omi529061@gmail.com",
+        "mithila0009@gmail.com": "omi529061@gmail.com",
+        "ismail0009@gmail.com": "omi529061@gmail.com",
+        "rono0009@gmail.com": "omi529061@gmail.com",
+        "nondita0009@gmail.com": "omi529061@gmail.com",
+        "rono999@gmail.com": "rono0009@gmail.com",
+        "omi999@gmail.com": "rono0009@gmail.com"
+    },
+    "affiliate_balances": {
+        "rono999@gmail.com": 0.0,
+        "rono0009@gmail.com": 2410.0,
+        "omi999@gmail.com": 0.0
+    },
+    "wagering_target": {
+        "rono999@gmail.com": 0.0,
+        "omi529061@gmail.com": 0.0,
+        "rono0009@gmail.com": 1580.0,
+        "omi999@gmail.com": 7000.0
+    },
+    "device_tracking": {
+        "unknown_device": 2
+    },
+    "game_logs": [
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:46:49"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:46:45"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:46:41"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:46:38"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:46:35"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:46:31"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:46:25"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:46:21"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:46:19"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:46:15"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:45:39"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:35:02"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:58"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:52"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:50"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:34:47"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:42"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:36"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:31"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:34:27"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:22"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:17"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:14"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:10"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:34:05"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:34:02"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:58"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:54"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:33:51"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:48"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:45"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:43"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:40"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:35"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:32"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:33:30"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:33:27"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:22"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:20"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:33:17"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:15"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:33:12"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:09"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:06"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:03"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:33:01"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:58"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:32:55"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:52"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:49"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:46"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:32:43"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:40"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:32:37"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:34"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:32:32"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:32:29"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:32:26"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:32:23"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:19"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:14"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:32:11"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:06"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:32:01"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:57"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:31:54"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:49"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:46"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:42"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:36"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:31:33"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:29"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:24"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:19"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:14"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:10"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:05"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:31:00"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:55"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:50"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:30:47"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:30:44"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:30:41"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:36"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:33"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:29"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:26"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:23"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:30:20"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:17"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:14"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:10"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:30:06"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:30:03"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:25"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:22"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:18"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:15"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:12"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:10"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:07"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:03"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:29:00"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:28:55"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:28:52"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:28:48"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:28:46"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:27:14"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:27:09"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:27:04"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:26:59"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:26:55"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:26:52"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:26:45"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:26:41"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:26:20"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:26:17"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:26:14"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:26:11"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:26:06"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:26:01"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:25:55"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "13:25:50"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:25:43"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "13:25:33"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:49:33"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:49:25"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Loss",
+            "time": "03:48:41"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:48:36"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:48:31"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Loss",
+            "time": "03:48:27"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:48:22"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Loss",
+            "time": "03:47:51"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Loss",
+            "time": "03:47:48"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:47:39"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Loss",
+            "time": "03:47:36"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Loss",
+            "time": "03:47:30"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:47:22"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:47:17"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:47:12"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Medium",
+            "res": "Win",
+            "time": "03:47:07"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "03:47:01"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "03:46:58"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "03:46:53"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "03:46:50"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "03:46:43"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "01:53:01"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "01:52:58"
+        },
+        {
+            "user": "omi5***",
+            "bet": 700.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "00:47:43"
+        },
+        {
+            "user": "rono***",
+            "bet": 1210.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:13:51"
+        },
+        {
+            "user": "rono***",
+            "bet": 640.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:13:33"
+        },
+        {
+            "user": "rono***",
+            "bet": 320.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:13:25"
+        },
+        {
+            "user": "rono***",
+            "bet": 160.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:13:18"
+        },
+        {
+            "user": "rono***",
+            "bet": 80.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:13:07"
+        },
+        {
+            "user": "rono***",
+            "bet": 40.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:13:01"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:12:55"
+        },
+        {
+            "user": "rono***",
+            "bet": 320.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "00:12:39"
+        },
+        {
+            "user": "rono***",
+            "bet": 160.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:12:30"
+        },
+        {
+            "user": "rono***",
+            "bet": 80.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:12:24"
+        },
+        {
+            "user": "rono***",
+            "bet": 40.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:12:18"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:12:11"
+        },
+        {
+            "user": "rono***",
+            "bet": 4800.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:11:53"
+        },
+        {
+            "user": "rono***",
+            "bet": 2400.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:11:44"
+        },
+        {
+            "user": "rono***",
+            "bet": 1200.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:11:32"
+        },
+        {
+            "user": "rono***",
+            "bet": 600.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:11:21"
+        },
+        {
+            "user": "rono***",
+            "bet": 300.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:11:13"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:11:01"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:10:58"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:10:55"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "00:10:26"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "00:10:23"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "00:09:57"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:31:07"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:31:04"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "23:30:44"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "23:30:39"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:11:44"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:11:42"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:11:38"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:11:35"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:11:32"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:11:30"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:11:27"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:11:20"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:11:14"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:11:09"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:11:05"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:11:02"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:10:58"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:10:53"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "23:10:38"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:10:30"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:10:27"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:10:16"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:10:13"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:10:11"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:10:08"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:10:04"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:53"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:32"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:27"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:21"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:19"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:16"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:13"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:10"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:07"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:04"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:09:01"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:59"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:08:50"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:47"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:44"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:41"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:08:27"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:25"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:21"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:19"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:16"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:13"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:08:10"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:07:55"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:07:52"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:07:49"
+        },
+        {
+            "user": "rono***",
+            "bet": 100.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:07:45"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "23:07:16"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:07:12"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:07:09"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:07:07"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:07:04"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:07:01"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:06:58"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:06:55"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:06:51"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:06:48"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "23:06:44"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "23:06:36"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "23:06:33"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "23:06:30"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "23:06:25"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "23:06:20"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "23:06:15"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "23:05:15"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Win",
+            "time": "23:00:56"
+        },
+        {
+            "user": "rono***",
+            "bet": 20.0,
+            "mode": "Low",
+            "res": "Loss",
+            "time": "23:00:52"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:36:12"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:36:09"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:36:07"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:36:06"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:36:04"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:36:03"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Win",
+            "time": "22:35:59"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:35:57"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:35:56"
+        },
+        {
+            "user": "omi5***",
+            "bet": 20.0,
+            "mode": "Jackpot",
+            "res": "Loss",
+            "time": "22:35:54"
+        }
+    ],
+    "active_packages": {
+        "omi529061@gmail.com": [
+            {
+                "price": 500,
+                "reward_balance": 200.0,
+                "last_claim": "2026-02-28 14:43:12",
+                "id": 23507
+            },
+            {
+                "price": 200,
+                "reward_balance": 40.0,
+                "last_claim": "2026-02-28 02:39:00",
+                "id": 99799
+            },
+            {
+                "price": 200,
+                "reward_balance": 40.0,
+                "last_claim": "2026-02-28 14:42:15",
+                "id": 90541
+            }
+        ],
+        "rono0009@gmail.com": [
+            {
+                "price": 200,
+                "reward_balance": 40.0,
+                "last_claim": "2026-02-28 02:20:09",
+                "id": 28760
+            },
+            {
+                "price": 5000,
+                "reward_balance": 1000.0,
+                "last_claim": "2026-02-28 02:58:32",
+                "id": 65598
+            }
+        ]
+    }
+}
