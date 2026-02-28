@@ -6,7 +6,7 @@ import datetime
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Withdraw - Earning Pro", layout="centered")
 
-# --- UNIVERSAL PREMIUM CSS ---
+# --- UNIVERSAL PREMIUM CSS (Original Unchanged) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -66,6 +66,19 @@ def save_data(file_name, data):
     with open(file_name, "w") as f:
         json.dump(data, f, indent=4)
 
+# --- BACKUP SYSTEM: UPDATE SHEET AFTER WITHDRAW ---
+def update_sheet_balances(email, balance, affiliate_balance):
+    try:
+        if "sheet_conn" in st.session_state and st.session_state.sheet_conn:
+            sheet = st.session_state.sheet_conn.worksheet("Users")
+            cell = sheet.find(email)
+            if cell:
+                # Column 3 = Main Balance, Column 6 = Affiliate Balance
+                sheet.update_cell(cell.row, 3, balance)
+                sheet.update_cell(cell.row, 6, affiliate_balance)
+    except:
+        pass
+
 
 user_email = st.session_state.get("user")
 if not user_email:
@@ -77,7 +90,7 @@ st.title("📤 Withdraw Money")
 user_data = load_data("user_data.json")
 requests_data = load_data("requests.json")
 
-# ব্যালেন্স লোড (আপনার ১ নং শর্ত অনুযায়ী আলাদা ব্যালেন্স)
+# ব্যালেন্স লোড (আপনার ১ নং শর্ত অনুযায়ী আলাদা ব্যালেন্স)
 current_balance = user_data.get("balances", {}).get(user_email, 0.0)
 affiliate_balance = user_data.get("affiliate_balances", {}).get(user_email, 0.0)
 hidden_wagering = user_data.get("wagering_target", {}).get(user_email, 0.0)
@@ -104,7 +117,6 @@ with col_b2:
 if has_pending_withdraw:
     st.warning("⚠️ You already have a pending request. Please wait.")
 else:
-    # উইথড্র টাইপ সিলেক্ট (আপনার ১ নং শর্ত)
     withdraw_type = st.radio("Withdraw From:", ["Player Balance", "Affiliate Account"], horizontal=True)
 
     with st.form("withdraw_form"):
@@ -114,7 +126,9 @@ else:
         submit = st.form_submit_button("Submit Request")
 
         if submit:
-            # শর্ত ১: অ্যাফিলিয়েট অ্যাকাউন্ট উইথড্র (মিনিমাম ২০০০)
+            process_withdraw = False
+            withdraw_label = ""
+
             if withdraw_type == "Affiliate Account":
                 if affiliate_balance < 2000:
                     st.error("❌ Affiliate withdrawal requires a minimum balance of ৳ 2000.")
@@ -123,16 +137,13 @@ else:
                 elif amount < 2000:
                     st.error("❌ Minimum Affiliate withdraw amount is ৳ 2000.")
                 else:
-                    # সাকসেস লজিক ফর অ্যাফিলিয়েট
                     user_data["affiliate_balances"][user_email] -= amount
                     process_withdraw = True
                     withdraw_label = "From Affiliate Account"
 
-            # শর্ত ২: প্লেয়ার ব্যালেন্স উইথড্র (৭০% ওয়েজারিং চেক)
             else:
-                if hidden_wagering > 0.1:  # ০.১ দেওয়া হয়েছে ফ্লোটিং পয়েন্ট সেফটির জন্য
-                    st.error(
-                        f"❌ You need to play ৳ {round(hidden_wagering, 2)} more in games before you can withdraw your deposit.")
+                if hidden_wagering > 0.1:
+                    st.error(f"❌ You need to play ৳ {round(hidden_wagering, 2)} more in games before you can withdraw.")
                 elif amount > current_balance:
                     st.error("❌ Insufficient Player balance!")
                 else:
@@ -140,11 +151,10 @@ else:
                     process_withdraw = True
                     withdraw_label = "From Player Balance"
 
-            # ফাইনাল প্রসেসিং
-            if 'process_withdraw' in locals() and process_withdraw:
+            if process_withdraw:
                 now = datetime.datetime.now().strftime("%I:%M %p, %d %b %Y")
 
-                # হিস্টোরিতে সেভ
+                # লোকাল ডেটা আপডেট
                 if "history" not in user_data: user_data["history"] = {}
                 if user_email not in user_data["history"]: user_data["history"][user_email] = []
                 user_data["history"][user_email].append({
@@ -153,10 +163,12 @@ else:
                 })
                 save_data("user_data.json", user_data)
 
-                # রিকোয়েস্ট লিস্টে সেভ (আপনার ১ নং শর্ত অনুযায়ী লেবেলসহ)
+                # গুগল শিটে ব্যাকআপ আপডেট (যাতে লোকাল ফাইল ডিলিট হলেও ব্যালেন্স আপডেট থাকে)
+                update_sheet_balances(user_email, user_data["balances"].get(user_email, 0.0), user_data["affiliate_balances"].get(user_email, 0.0))
+
                 if not isinstance(requests_data, list): requests_data = []
                 requests_data.append({
-                    "user": user_email, "type": "Withdraw", "label": withdraw_label,  # এডমিন প্যানেলের জন্য লেবেল
+                    "user": user_email, "type": "Withdraw", "label": withdraw_label,
                     "method": method, "number": number, "amount": amount, "time": now, "status": "Pending"
                 })
                 save_data("requests.json", requests_data)

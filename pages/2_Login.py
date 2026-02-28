@@ -2,11 +2,12 @@ import streamlit as st
 import json
 import hashlib
 import time
+import os
 
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Login - Earning Pro", layout="centered")
 
-# --- ULTRA-PREMIUM CSS (Matching Dashboard & Register) ---
+# --- ULTRA-PREMIUM CSS (Apnar ager design huba-hu rakha hoyeche) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -14,18 +15,15 @@ st.markdown("""
     html, body, [class*="css"] { font-family: 'Poppins', sans-serif; }
     header {visibility: hidden;} 
 
-    /* High-End Radial Gradient Background */
     .stApp { 
         background: radial-gradient(circle at top right, #1e293b, #0f172a 60%, #020617 100%);
         color: #ffffff; 
     }
 
-    /* Professional Glassmorphism Card */
     div.stButton > button, div.stTextInput > div > div > input {
         transition: all 0.3s ease !important;
     }
 
-    /* Card Box for Login */
     .login-container {
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.08);
@@ -37,7 +35,6 @@ st.markdown("""
         margin-top: 20px;
     }
 
-    /* Input Fields Styling */
     .stTextInput input {
         background-color: rgba(255, 255, 255, 0.03) !important;
         color: #f8fafc !important;
@@ -51,7 +48,6 @@ st.markdown("""
         box-shadow: 0 0 15px rgba(56, 189, 248, 0.2) !important;
     }
 
-    /* Primary Login Button */
     div.stButton > button {
         background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
         color: white !important;
@@ -82,9 +78,23 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
-# --- পাসওয়ার্ড চেক করার জন্য হ্যাশ ফাংশন ---
 def hash_password(password):
     return hashlib.sha256(str.encode(password)).hexdigest()
+
+# --- BACKUP SYSTEM: GOOGLE SHEET THEKE DATA KHUJE ANA ---
+def check_backup_login(email, hashed_pw):
+    try:
+        if "sheet_conn" in st.session_state and st.session_state.sheet_conn:
+            sheet = st.session_state.sheet_conn.worksheet("Users")
+            cell = sheet.find(email)
+            if cell:
+                # Password column 2 te ache (Register code onujayi)
+                db_password = sheet.cell(cell.row, 2).value
+                if db_password == hashed_pw:
+                    return True
+    except:
+        pass
+    return False
 
 
 # --- LOGIN LOGIC ---
@@ -106,7 +116,6 @@ else:
     st.markdown('<div class="login-title">User Login</div>', unsafe_allow_html=True)
     st.markdown('<div class="login-sub">Enter your credentials to access your account</div>', unsafe_allow_html=True)
 
-    # লজিক্যাল কন্টেইনার
     with st.container():
         email = st.text_input("Enter Gmail").lower().strip()
         pwd = st.text_input("Enter Password", type="password")
@@ -114,31 +123,31 @@ else:
         st.markdown("<br>", unsafe_allow_html=True)
         if st.button("Login Now"):
             if email and pwd:
-                try:
-                    import os
+                hashed_input_pwd = hash_password(pwd)
+                authenticated = False
 
-                    if os.path.exists("user_data.json"):
-                        with open("user_data.json", "r") as f:
-                            data = json.load(f)
+                # ১. আপনার অরিজিনাল JSON লজিক (হুবহু রাখা হয়েছে)
+                if os.path.exists("user_data.json"):
+                    with open("user_data.json", "r") as f:
+                        data = json.load(f)
+                    if email in data.get("users", {}) and data["users"][email] == hashed_input_pwd:
+                        authenticated = True
 
-                        hashed_input_pwd = hash_password(pwd)
+                # ২. ব্যাকআপ চেক (যদি অনলাইনে JSON ডিলিট হয়ে যায়)
+                if not authenticated:
+                    if check_backup_login(email, hashed_input_pwd):
+                        authenticated = True
 
-                        if email in data["users"] and data["users"][email] == hashed_input_pwd:
-                            st.session_state.user = email
-                            st.success(f"✅ Welcome {email}! Logging in...")
-                            time.sleep(1)
-                            st.rerun()
-                        else:
-                            st.error("❌ Wrong Email or Password.")
-                    else:
-                        st.error("❌ No users found. Please Register first.")
-                except Exception as e:
-                    st.error("❌ An error occurred. Please try again.")
+                if authenticated:
+                    st.session_state.user = email
+                    st.success(f"✅ Welcome {email}! Logging in...")
+                    time.sleep(1)
+                    st.rerun()
+                else:
+                    st.error("❌ Wrong Email or Password.")
             else:
                 st.warning("⚠️ Please enter both email and password.")
 
-    # রেজিস্ট্রেশনে যাওয়ার অপশন
     st.markdown("---")
-    # --- UPDATED NAVIGATION LOGIC (SMOOTH ADDITION) ---
     if st.button("Don't have an account? Register Here", use_container_width=True):
         st.switch_page("pages/1_Register.py")

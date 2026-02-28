@@ -9,7 +9,7 @@ import time
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Register - Earning Pro", layout="centered")
 
-# --- ULTRA-PREMIUM CSS (তোমার আগের সব ডিজাইন হুবহু রাখা হয়েছে) ---
+# --- ULTRA-PREMIUM CSS (Huba-hu ager motoi ache) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -111,14 +111,19 @@ def save_data(data):
         json.dump(data, f, indent=4)
 
 
-# --- GOOGLE SHEETS SYNC FUNCTION (নতুন যোগ করা হয়েছে) ---
-def sync_to_google_sheets(email, password, balance, ref_code, ref_by):
+# --- GOOGLE SHEETS SYNC (Optimized - No deletion of existing logic) ---
+def sync_to_google_sheets(email, password, balance, ref_code, ref_by, affiliate_balance):
     try:
         if "sheet_conn" in st.session_state and st.session_state.sheet_conn:
+            # Users namer worksheet e data add hobe
             sheet = st.session_state.sheet_conn.worksheet("Users")
-            sheet.append_row([email, password, balance, ref_code, ref_by])
+
+            # Notun user er pura data row hishebe boshbe
+            # Column: Email, Password, Main Balance, My Ref Code, Referred By, Affiliate Balance, Created At
+            created_at = time.strftime("%Y-%m-%d %H:%M:%S")
+            sheet.append_row([email, password, balance, ref_code, ref_by, affiliate_balance, created_at])
     except Exception as e:
-        # এটি ব্যাকগ্রাউন্ডে ভুল হলে স্টপ করবে না
+        # Background e failure holeo error dekhabe na jeno user disturb na hoy
         pass
 
 
@@ -201,8 +206,16 @@ with st.form("register_form"):
             # ১. লোকাল ফাইলে সেভ (আগের মতোই)
             save_data(data)
 
-            # ২. গুগল শিটে সেভ (নতুন যোগ করা ফাংশন)
-            sync_to_google_sheets(email, hashed_pw, 0.0, user_new_ref, final_ref_by)
+            # ২. গুগল শিটে সেভ (Ready with all data)
+            # Row Format: [Email, Password, Balance, Ref_Code, Ref_By, Affiliate_Balance]
+            sync_to_google_sheets(
+                email,
+                hashed_pw,
+                0.0,
+                user_new_ref,
+                final_ref_by,
+                data["affiliate_balances"][email]
+            )
 
             # অটো-লগইন লজিক
             st.session_state.user = email
