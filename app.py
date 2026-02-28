@@ -45,7 +45,7 @@ dashboard_pg = st.Page("pages/3_Dashboard.py", title="Dashboard", icon="📊")
 game_pg = st.Page("pages/4_Play_Game.py", title="Color Game", icon="🎮")
 admin_pg = st.Page("pages/5_Admin_Panel.py", title="Admin Panel", icon="🛠️")
 deposit_pg = st.Page("pages/6_Deposit.py", title="Deposit Funds", icon="📥")
-withdraw_pg = st.Page("pages/7_Withdraw.py", title="Withdraw Money", icon="📤")
+withdraw_pg = st.Page("pages/7_withdraw.py", title="Withdraw Money", icon="📤")
 refer_pg = st.Page("pages/8_Refer.py", title="Refer & Earn", icon="👥")
 # নতুন প্যাকেজ পেজটি এখানে যুক্ত করা হলো
 packages_pg = st.Page("pages/9_Packages.py", title="Stable Earn", icon="💎")
