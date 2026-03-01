@@ -178,7 +178,7 @@ if st.button("⚡ VIEW ACTIVE ASSETS", use_container_width=True):
 
 # Affiliate Hub
 st.markdown('<div class="section-title">Affiliate Hub</div>', unsafe_allow_html=True)
-st.code(f"http://https://earning-pro-bd.streamlit.app//Register?ref={my_code}", language=None)
+st.code(f"https://earning-pro-bd.streamlit.app/", language=None)
 
 # --- LOGOUT ---
 st.markdown("<br><br>", unsafe_allow_html=True)

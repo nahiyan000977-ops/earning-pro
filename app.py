@@ -77,5 +77,9 @@ else:
 if "register_clicked" in st.session_state and st.session_state.register_clicked:
     st.session_state.register_clicked = False
     st.switch_page("pages/1_Register.py")
-
+# এটি নিশ্চিত করবে যে কোনো পেজ না পেলে সে সরাসরি রেজিস্ট্রেশন পেজে যাবে
+try:
+    pg.run()
+except Exception:
+    st.switch_page(register_pg)
 pg.run()
