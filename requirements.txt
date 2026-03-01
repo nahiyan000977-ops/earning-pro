@@ -1,5 +1,2 @@
 streamlit
-gspread
-gspread-streamlit
-google-auth
-oauth2client
+pandas

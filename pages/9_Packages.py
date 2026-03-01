@@ -250,11 +250,7 @@ else:
                     remaining_str = ""
                     last_claim_raw = pkg.get('last_claim', "")
 
-                    # --- ADDED TYPE SAFETY CHECK ---
-                    if not isinstance(last_claim_raw, str):
-                        last_claim_raw = ""
-
-                    if last_claim_raw and last_claim_raw != "":
+                    if last_claim_raw and isinstance(last_claim_raw, str) and last_claim_raw != "":
                         try:
                             last_time = datetime.strptime(last_claim_raw, "%Y-%m-%d %H:%M:%S")
                             if datetime.now() < last_time + timedelta(hours=24):

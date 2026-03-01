@@ -21,30 +21,6 @@ def logout_user():
     st.rerun()
 
 
-# --- GOOGLE SHEETS SYNC LOGIC (Data loss protection) ---
-def sync_data_from_sheets(local_data):
-    """Jodi local data missing thake, tobe Sheets theke ene sync korbe"""
-    try:
-        if "sheet_conn" in st.session_state and st.session_state.sheet_conn:
-            sheet = st.session_state.sheet_conn.worksheet("Users")
-            records = sheet.get_all_records()
-
-            for row in records:
-                email = row.get("Email")
-                if email == user_email:
-                    # JSON data update kora (jodi Sheets e thake)
-                    local_data["balances"][email] = float(row.get("Balance", 0.0))
-                    local_data["my_ref_code"][email] = row.get("My Ref Code", "N/A")
-                    local_data["affiliate_balances"][email] = float(row.get("Affiliate Balance", 0.0))
-                    # referred_by_map sync kora
-                    ref_by = row.get("Referred By", "None")
-                    local_data["referred_by_map"][email] = ref_by
-            return local_data
-    except:
-        return local_data
-    return local_data
-
-
 # --- ORIGINAL CSS (Unchanged) ---
 st.markdown("""
     <style>
@@ -131,14 +107,9 @@ st.markdown(f'''
 
 # --- DATA ---
 def load_data():
-    raw_data = {"balances": {}, "referred_by_map": {}, "my_ref_code": {}, "affiliate_balances": {},
-                "wagering_target": {}}
     if os.path.exists("user_data.json"):
-        with open("user_data.json", "r") as f:
-            raw_data = json.load(f)
-
-    # EXTRA SYNC: Google Sheet theke latest data ana
-    return sync_data_from_sheets(raw_data)
+        with open("user_data.json", "r") as f: return json.load(f)
+    return {"balances": {}, "referred_by_map": {}, "my_ref_code": {}, "affiliate_balances": {}, "wagering_target": {}}
 
 
 data = load_data()
@@ -180,8 +151,10 @@ with c4: st.markdown(
     f'<div class="stats-card"><div style="color: #94a3b8;">Network Size</div><div style="font-size: 28px; font-weight: 700;">{ref_count}</div></div>',
     unsafe_allow_html=True)
 
+
 # Action Grid (Updated for Stable Earn)
 st.markdown('<div class="section-title">Financial Terminal</div>', unsafe_allow_html=True)
+# কলাম সংখ্যা ৪ থেকে বাড়িয়ে ৫ করা হয়েছে নতুন বাটনের জন্য
 b1, b2, b3, b4, b5 = st.columns(5)
 with b1:
     if st.button("💎\nDeposit Funds"): st.switch_page("pages/6_Deposit.py")
@@ -192,17 +165,20 @@ with b3:
 with b4:
     if st.button("📢\nRefer Center"): st.switch_page("pages/8_Refer.py")
 with b5:
+    # নতুন Stable Earn বাটনটি এখানে যোগ করা হলো
     if st.button("✨\nStable Earn"): st.switch_page("pages/9_Packages.py")
 
 # --- NEW LOGIC FOR ACTIVE ASSETS BUTTON ---
+# এটি ফাইন্যান্সিয়াল টার্মিনালের নিচে একটি বিশেষ বাটন যোগ করবে
 st.markdown('<div class="section-title">Investment Portal</div>', unsafe_allow_html=True)
 if st.button("⚡ VIEW ACTIVE ASSETS", use_container_width=True):
+    # সেশন স্টেটে একটি ভেরিয়েবল সেট করা হচ্ছে যাতে অন্য পেজ বুঝতে পারে এই বাটনটি চাপা হয়েছে
     st.session_state.show_active_assets = True
     st.switch_page("pages/9_Packages.py")
 
 # Affiliate Hub
 st.markdown('<div class="section-title">Affiliate Hub</div>', unsafe_allow_html=True)
-st.code(f"https://earning-pro-bd.streamlit.app/Register?ref={my_code}", language=None)
+st.code(f"http://https://earning-pro-bd.streamlit.app//Register?ref={my_code}", language=None)
 
 # --- LOGOUT ---
 st.markdown("<br><br>", unsafe_allow_html=True)

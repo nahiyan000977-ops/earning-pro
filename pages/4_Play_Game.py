@@ -170,7 +170,7 @@ elif st.session_state.active_game == "mega_spin":
         odd_choice = st.selectbox("", ["Low Risk (1:0.5x)", "Medium Risk (1:1x)", "High Risk (1:2x)",
                                        "Jackpot Mode (1:5x)"], label_visibility="collapsed")
 
-    odds_config = {"Low Risk (1:0.5x)": {"multiplier": 0.5, "chance": 80},
+    odds_config = {"Low Risk (1:0.5x)": {"multiplier": 0.5, "chance": 63},
                    "Medium Risk (1:1x)": {"multiplier": 1.0, "chance": 48},
                    "High Risk (1:2x)": {"multiplier": 2.0, "chance": 30},
                    "Jackpot Mode (1:5x)": {"multiplier": 5.0, "chance": 13}}
