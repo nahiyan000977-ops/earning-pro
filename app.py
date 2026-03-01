@@ -82,4 +82,9 @@ try:
     pg.run()
 except Exception:
     st.switch_page(register_pg)
-pg.run()
+# আগের pg.run() মুছে নিচের এইটুকু বসাও
+try:
+    pg.run()
+except Exception as e:
+    # যদি কোনো এরর হয়, তবে সেটি স্ক্রিনে না দেখিয়ে সরাসরি মেইন পেজে নিয়ে যাবে
+    st.switch_page(register_pg)
